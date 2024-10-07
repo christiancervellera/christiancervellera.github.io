@@ -50,6 +50,7 @@ with [K. Salvanes](https://sites.google.com/view/kjellsalvanes)
 
   <details>
     <summary> Abstract </summary>
+  </details>
 
 
 ## Publications
