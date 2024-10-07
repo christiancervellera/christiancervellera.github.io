@@ -51,7 +51,6 @@ with [K. Salvanes](https://sites.google.com/view/kjellsalvanes)
   <details>
     <summary> Abstract </summary>
 
-# During my predoc
 
 ## Publications
 
@@ -71,7 +70,3 @@ Master's Degree in Business Administration <br>
 > G. Salvemini: "Noi non possiamo essere imparziali. Possiamo essere soltanto intellettualmente onesti: cioè renderci conto delle nostre passioni, tenerci in guardia contro di esse e mettere in guardia i nostri lettori contro i pericoli della nostra parzialità. L'imparzialità è un sogno, la probità è un dovere." 
 
 
-## References
-
-* Foo Bar: Head of Department, Placeholder Names, Lorem
-* John Doe: Associate Professor, Department of Computer Science, Ipsum
