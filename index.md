@@ -4,7 +4,7 @@ layout: default
 
 ## About Me
 
-<img class="profile-picture" src="sherlock.jpg">
+<img class="profile-picture" src="new_propic.png">
 
 M.Res./Ph.D. student, Political Science and Political Economy
 <address>
