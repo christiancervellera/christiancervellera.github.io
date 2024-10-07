@@ -3,24 +3,23 @@ layout: default
 is_contact: true
 ---
 
-* Email: [foo@xyz.com](mailto:foo@xyz.com)
+* Email: [c.cervellera@lse.ac.uk](mailto:c.cervellera@lse.ac.uk)
 
-* Phone: [+91-123123](tel:+91-123123)
+* Phone: [+393401969992](tel:+393401969992)
 
 ---
 
 ## Mailing Address
 
-> 221B, Baker Street
->
-> London
->
+> Department of Government
+> London School of Economics and Political Science
+> Houghton Street
+> London WC2A 2AE
 > United Kingdom
 
 ---
 
 ## Social
 
-1. [Facebook](#)
-2. [Twitter](#)
-3. [Google+](#)
+* [Twitter]((https://x.com/_natriskij))
+* [LinkedIn](https://www.linkedin.com/in/ccervellera)
