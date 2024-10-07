@@ -3,7 +3,7 @@ url: "https://christiancervellera.github.io"
 baseurl: "/"
 
 markdown: kramdown
-ins_logo: "./LSE-logo-resized-V4.png"
+#ins_logo: "./LSE-logo-resized-V4.png"
 
 tracking_id: #
 
@@ -17,7 +17,7 @@ sass:
 
 nav:
  - name: "About"
-   link: ""
+   link: "/"
  - name: "CV"
    link: "resume.pdf"
  - name: "Contact"
