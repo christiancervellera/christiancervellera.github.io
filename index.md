@@ -24,10 +24,11 @@ Previously pre-doctoral fellow at [FAIR, Norwegian School of Economics](https://
 * Political Economy
 * Economic History
 
+---
 
-## Research 
+# Research 
 
-# Work in Progress
+## Work in Progress
 
 **The Bolshevik roots of social capital: an empirical investigation** <br>
 Master's thesis
@@ -52,12 +53,15 @@ with [K. Salvanes](https://sites.google.com/view/kjellsalvanes)
     <summary> Abstract </summary>
   </details>
 
+----
 
 ## Publications
 
 1. S.Holmes, J.Watson: Consequences of living with a sociopath in London
 
-## Teaching
+----
+
+# Teaching
 
 **Crash Course of Quantitative Methods** <br>
 Instructor <br>
