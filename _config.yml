@@ -9,7 +9,7 @@ tracking_id: #
 
 footer: yes
 footer_url: "https://github.com/ankitsultana"
-footer_text: ""
+footer_text: "Page design by Ankit Sultana"
 
 sass:
     style: compressed
