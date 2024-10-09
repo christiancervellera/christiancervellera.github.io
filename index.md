@@ -31,6 +31,13 @@ Previously pre-doctoral fellow at [FAIR, Norwegian School of Economics](https://
 
 ## Work in Progress
 
+** Social capital and the rise of Fascism in Italy** <br>
+with F. De Alberti (UBC) and F. Valencia Caicedo (UBC)
+
+  <details>
+    <summary> Abstract </summary>
+  </details>
+
 **The Bolshevik roots of social capital: an empirical investigation** <br>
 Master's thesis
 
@@ -47,7 +54,7 @@ This paper investigates the long-term effects of the Red Scare on social capital
 ---
 
 **Unemployment, war, and technological change in XXth century Norway** <br>
-with [K. Salvanes](https://sites.google.com/view/kjellsalvanes)
+with [K. Salvanes (NHH)](https://sites.google.com/view/kjellsalvanes)
 
 
   <details>
