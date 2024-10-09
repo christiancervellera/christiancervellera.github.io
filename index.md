@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## About Me
+# About Me
 
 <img class="profile-picture" src="new_propic.png">
 
