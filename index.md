@@ -31,15 +31,6 @@ Previously pre-doctoral fellow at [FAIR, Norwegian School of Economics](https://
 
 ## Work in Progress
 
-**Social capital and the rise of Fascism in Italy** <br>
-with F. De Alberti (UBC) and F. Valencia Caicedo (UBC)
-
-  <details>
-    <summary> Abstract </summary>
-  </details>
-
----
-
 **The Bolshevik roots of social capital: an empirical investigation** <br>
 Master's thesis
 
