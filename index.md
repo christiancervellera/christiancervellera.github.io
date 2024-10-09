@@ -10,7 +10,7 @@ M.Res./Ph.D. student, Political Science and Political Economy
 <address>
 Department of Government<br />London School of Economics and Political Science<br />Houghton Street <br /> London WC2A 2AE<br /> UK
 </address> <br>
-📯 [c.cervellera@lse.ac.uk](mailto:c.cervellera@lse.ac.uk); [Twitter](https://x.com/_natriskij); [LinkedIn](https://www.linkedin.com/in/ccervellera)
+📯 [Email](mailto:c.cervellera@lse.ac.uk); [Twitter](https://x.com/_natriskij); [LinkedIn](https://www.linkedin.com/in/ccervellera); [Github](https://github.com/christiancervellera)
 
 
 ---
