@@ -44,7 +44,7 @@ This paper investigates the long-term effects of the Red Scare on social capital
     I suggest evidence in favour of the role of polarization and the subsequent political violence.
   </details> 
     
----
+
 
 **Unemployment, war, and technological change in XXth century Norway** <br>
 with [K. Salvanes (NHH)](https://sites.google.com/view/kjellsalvanes)
