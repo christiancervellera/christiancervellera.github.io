@@ -55,7 +55,7 @@ with [K. Salvanes (NHH)](https://sites.google.com/view/kjellsalvanes)
   </details>
 
 
----
+
 
 # Teaching
 
