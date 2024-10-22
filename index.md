@@ -14,6 +14,8 @@ Before LSE, I worked as a pre-doctoral fellow at [FAIR, Norwegian School of Econ
 
 ***Education:*** 🎓 B.A. (2021) and M.Sc. (2023) in Economics, [Alma Mater Studiorum - Università di Bologna](https://dse.unibo.it/it/index.html) <br>
 
+## Get in touch
+
 <address>
 Department of Government<br />London School of Economics and Political Science<br />Houghton Street <br /> London WC2A 2AE<br /> UK
 </address> <br>
