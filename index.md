@@ -17,7 +17,7 @@ Before LSE, I worked as a pre-doctoral fellow at [FAIR, Norwegian School of Econ
 ## Get in touch
 
 <address>
-Department of Government<br />London School of Economics and Political Science<br />Houghton Street <br /> London WC2A 2AE<br /> UK
+LSE Department of Government, Houghton Street, London WC2A 2AE, UK
 </address> <br>
 📯 [Email](mailto:c.cervellera@lse.ac.uk); [Twitter](https://x.com/_natriskij); [LinkedIn](https://www.linkedin.com/in/ccervellera); [GitHub](https://github.com/christiancervellera)
 
