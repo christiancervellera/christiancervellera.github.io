@@ -31,16 +31,12 @@ Previously pre-doctoral fellow at [FAIR, Norwegian School of Economics](https://
 
 ## Work in Progress
 
-**The Bolshevik roots of social capital: an empirical investigation** <br>
-Master's thesis
-
-###### Presented at: Norwegian Winter Games in Economic History 2023; FAIR P&P
-
+    
+**Repression, Resistance, and Civicness in (anti)fascist Italy** <br>
 
   <details>
     <summary> Abstract </summary>
-  </details> 
-    
+  </details>
 
 
 **Historical unemployment in XXth century Norway** <br>
