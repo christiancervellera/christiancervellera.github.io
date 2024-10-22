@@ -6,24 +6,20 @@ layout: default
 
 <img class="profile-picture" src="new_propic.png">
 
-M.Res./Ph.D. student, Political Science and Political Economy
+I am an MRes/PhD student at the [Department of Government](https://www.lse.ac.uk/government) at the London School of Economics and Political Science, under the Political Science and Political Economy group and the supervision of [Valentino Larcinese](https://www.lse.ac.uk/government/people/academic-staff/valentino-larcinese). <br>
+
+My research interests center around historical political economy, using causal inference tools. I am particularly interested in the causes and consequences of political culture and the dynamics of collective memory. <br>
+
+Before LSE, I worked as a pre-doctoral fellow at [FAIR, Norwegian School of Economics](https://www.nhh.no/en/research-centres/fair) in Bergen. <br>
+
+***Education:*** 🎓 B.A. (2021) and M.Sc. (2023) in Economics, [Alma Mater Studiorum - Università di Bologna](https://dse.unibo.it/it/index.html) <br>
+
 <address>
 Department of Government<br />London School of Economics and Political Science<br />Houghton Street <br /> London WC2A 2AE<br /> UK
 </address> <br>
 📯 [Email](mailto:c.cervellera@lse.ac.uk); [Twitter](https://x.com/_natriskij); [LinkedIn](https://www.linkedin.com/in/ccervellera); [GitHub](https://github.com/christiancervellera)
 
 
----
-
-Previously pre-doctoral fellow at [FAIR, Norwegian School of Economics](https://www.nhh.no/en/research-centres/fair)
-
-🎓 B.A. (2021) and M.Sc. (2023) in Economics, [Alma Mater Studiorum - Università di Bologna](https://dse.unibo.it/it/index.html) <br>
-
----
-
-**Research interests**
-* Political Economy
-* Economic History
 
 ---
 
