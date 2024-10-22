@@ -53,7 +53,7 @@ with [K. Salvanes (NHH)](https://sites.google.com/view/kjellsalvanes)
 
 
 
-**Monuments to emigrants ** <br>
+**Monuments to emigrants** <br>
 
   <details>
     <summary> Abstract </summary>
