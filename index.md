@@ -9,7 +9,7 @@ layout: default
 I am a MRes/PhD student at the [Department of Government](https://www.lse.ac.uk/government) at the London School of Economics and Political Science. <br>
 I am part of the Political Science and Political Economy group, under the supervision of [Valentino Larcinese](https://www.lse.ac.uk/government/people/academic-staff/valentino-larcinese). <br>
 
-My research interests center around historical political economy, using causal inference tools. I am particularly interested in the causes and consequences of political cultures and the dynamics of collective memory. <br>
+My research interests center around historical political economy, using causal inference tools.  <br>
 
 Before LSE, I worked as a pre-doctoral fellow at [FAIR, Norwegian School of Economics](https://www.nhh.no/en/research-centres/fair) in Bergen. <br>
 
@@ -47,12 +47,6 @@ with [K. Salvanes (NHH)](https://sites.google.com/view/kjellsalvanes)
   </details>
 
 
-
-**Monuments to emigrants** <br>
-
-  <details>
-    <summary> Abstract </summary>
-  </details>
 
 # Teaching
 
