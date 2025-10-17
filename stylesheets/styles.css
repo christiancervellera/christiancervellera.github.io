@@ -179,10 +179,11 @@ header ul a strong {
   color:#222;
 }
 
-/* Main content column — made wider and responsive relative to wrapper/header */
+/* Main content column — use left margin so content starts just right of the fixed header */
+/* This is the key change: remove float:right and use margin-left to anchor the content to the left edge (after the header). */
 section {
-  width: calc(100% - 320px);
-  float:right;
+  margin-left: 320px; /* leave 270px for header + 50px gap */
+  width: calc(100% - 340px); /* allow a small gutter; keeps responsiveness */
   padding-bottom:50px;
   box-sizing: border-box;
 }
@@ -235,6 +236,7 @@ details summary {
   padding: 8px 6px;
   user-select: none;
   background: transparent;
+  position: relative; /* <-- needed so ::before divider positions relative to summary */
 }
 
 /* remove default marker in WebKit */
@@ -258,7 +260,7 @@ details summary::before {
   right: 0;
   height: 1px;
   background: rgba(0,0,0,0.04);
-  transform: translateY(24px); /* draws a line slightly below the summary text */
+  bottom: -6px; /* position the divider slightly below the summary */
   pointer-events: none;
   display: block;
 }
@@ -325,6 +327,8 @@ details .tab-content ul {
     border-width:1px 0;
     padding:20px 0;
     margin:0 0 20px;
+    margin-left: 0; /* override margin-left under narrow layouts */
+    width: auto;
   }
 
   header a small {
