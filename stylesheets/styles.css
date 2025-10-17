@@ -349,151 +349,352 @@ details[open] summary::after {
 /* truncated here for brevity in the preview file block — full file should be copied into your repo */
 
 
-/* ------------------------------------------------------
-   Definitive mobile + tablet layout fix
------------------------------------------------------- */
-
-@media screen and (max-width: 1024px) {
-  body {
-    padding: 20px;
-    background-attachment: scroll;
-    overflow-x: hidden; /* stop horizontal scrollbars */
+/* Smooth transitions for layout changes */
+@media screen and (max-width: 1100px) {
+  .wrapper {
+    max-width: 100%;
+    padding: 0 20px;
   }
+}
 
-  /* reset the fixed left column */
+/* TABLET LAYOUT (768px - 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  body {
+    padding: 30px 20px;
+    background-attachment: scroll;
+  }
+  
+  /* Convert fixed sidebar to sticky header */
   header {
-    position: static !important;
+    position: sticky !important;
+    top: 0;
+    z-index: 100;
     float: none !important;
     width: 100% !important;
-    display: block !important;
-    margin: 0 auto 30px auto !important;
-    text-align: center !important;
-    clear: both !important;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+    margin: -30px -20px 30px -20px; /* negative margins to extend full width */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    
+    /* Horizontal layout for tablet */
+    display: flex;
+    align-items: center;
+    gap: 30px;
   }
-
+  
   header img {
-    width: 150px;
-    height: auto;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    margin: 10px auto;
-    display: block;
+    margin: 0;
+    flex-shrink: 0;
   }
-
+  
+  header > div {
+    flex: 1;
+  }
+  
+  header h1 {
+    font-size: 24px;
+    margin: 0 0 8px 0;
+  }
+  
+  header p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
   .contact-buttons {
-    justify-content: center;
-    flex-wrap: wrap;
+    margin-top: 10px;
+    gap: 10px;
   }
-
-  /* main content stacks below */
+  
+  .contact-buttons a.cta {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+  
+  /* Main content adjustments */
   section {
     margin: 0 !important;
-    padding: 0 10px 40px 10px !important;
+    padding: 20px 0 40px 0 !important;
     width: 100% !important;
     max-width: 100% !important;
-    display: block !important;
-    clear: both !important;
   }
-
+  
+  /* Improve collapsible sections for tablet */
+  details.tab summary {
+    padding: 12px 40px 12px 12px;
+    background: rgba(0,0,0,0.02);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: background 200ms ease;
+  }
+  
+  details.tab summary:hover {
+    background: rgba(0,0,0,0.04);
+  }
+  
+  details.tab summary::after {
+    right: 12px;
+  }
+  
+  .collapsible-content {
+    padding: 0 12px;
+  }
+  
   footer {
-    position: static !important;
+    position: relative !important;
     float: none !important;
     width: 100% !important;
-    text-align: center !important;
-    margin-top: 40px !important;
-    clear: both !important;
+    margin-top: 60px !important;
+    padding-top: 30px !important;
+    border-top: 1px solid rgba(0,0,0,0.08);
   }
 }
 
-/* small phones */
-@media screen and (max-width: 600px) {
+/* MOBILE LAYOUT (max-width: 768px) */
+@media screen and (max-width: 768px) {
   body {
-    padding: 16px;
+    padding: 0;
+    background-attachment: scroll;
+    overflow-x: hidden;
     font-size: 15px;
+    line-height: 1.6;
   }
-
-  h1 {
-    font-size: 22px;
-  }
-
-  h2 {
-    font-size: 18px;
-  }
-
-  .contact-buttons a.cta {
-    flex: 1 1 100%;
-    text-align: center;
-    font-size: 0.9rem;
-    padding: 8px;
-  }
-}
-
-/* Default (desktop) */
-header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 250px;
-  height: 100%;
-  padding: 2rem;
-  background-color: #f8f8f8;
-  overflow-y: auto;
-}
-
-/* The main content shifts right to make space for the fixed header */
-.wrapper section, 
-.wrapper footer {
-  margin-left: 270px;
-  padding: 2rem;
-}
-
-/* --- Responsive layout for tablets and phones --- */
-@media (max-width: 900px) {
+  
+  /* Mobile header as a card */
   header {
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding: 1rem;
-    text-align: center;
+    position: relative !important;
+    float: none !important;
+    width: 100% !important;
+    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+    padding: 30px 20px !important;
+    margin: 0 0 20px 0 !important;
+    text-align: center !important;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   }
-
-  .wrapper section, 
-  .wrapper footer {
-    margin-left: 0;
-    padding: 1rem;
-  }
-
+  
   header img {
-    max-width: 120px;
-    height: auto;
-    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    display: block;
+    border: 3px solid rgba(255,255,255,0.9);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
-
+  
   header h1 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
+    font-size: 26px;
+    margin: 0 0 12px 0;
+    color: #222;
   }
-
+  
+  header p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 15px 0;
+    color: #595959;
+  }
+  
+  /* Mobile-optimized contact buttons */
   .contact-buttons {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 8px;
+    flex-wrap: nowrap;
+    margin-top: 15px;
   }
-
-  .contact-buttons .cta {
-    padding: 0.4rem 0.8rem;
+  
+  .contact-buttons a.cta {
+    flex: 1;
+    padding: 10px 8px;
     font-size: 0.9rem;
+    text-align: center;
+    border-radius: 6px;
+    transition: transform 150ms ease, box-shadow 150ms ease;
+  }
+  
+  .contact-buttons a.cta:active {
+    transform: scale(0.98);
+  }
+  
+  /* Main content mobile optimization */
+  section {
+    margin: 0 !important;
+    padding: 20px 20px 40px 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  section h1 {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+  
+  section h2 {
+    font-size: 19px;
+  }
+  
+  section h3 {
+    font-size: 17px;
+  }
+  
+  /* Mobile-friendly collapsibles */
+  details.tab {
+    margin: 0 -20px 12px -20px; /* extend to screen edges */
+    padding: 0 20px;
+  }
+  
+  details.tab summary {
+    padding: 14px 44px 14px 16px;
+    background: rgba(0,0,0,0.02);
+    margin: 0 -20px;
+    border-top: 1px solid rgba(0,0,0,0.04);
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+    -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+    touch-action: manipulation;
+  }
+  
+  details.tab summary:active {
+    background: rgba(0,0,0,0.05);
+  }
+  
+  details.tab summary h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  details.tab summary::after {
+    right: 20px;
+    font-size: 1.2rem;
+  }
+  
+  details.tab summary::before {
+    display: none; /* remove divider line on mobile */
+  }
+  
+  .collapsible-content {
+    padding: 16px 0;
+    animation: slideDown 250ms ease-out;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Improve lists on mobile */
+  ul {
+    padding-left: 20px;
+  }
+  
+  li {
+    margin-bottom: 8px;
+  }
+  
+  /* Footer mobile optimization */
+  footer {
+    position: relative !important;
+    float: none !important;
+    width: 100% !important;
+    background: rgba(0,0,0,0.02);
+    padding: 30px 20px !important;
+    margin: 40px -20px 0 -20px !important;
+    text-align: center !important;
+    border-top: 1px solid rgba(0,0,0,0.08);
+  }
+  
+  footer p {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #666;
   }
 }
 
-@media (max-width: 900px) {
-  .wrapper {
-    display: block !important;
+/* VERY SMALL PHONES (max-width: 400px) */
+@media screen and (max-width: 400px) {
+  header img {
+    width: 100px;
+    height: 100px;
   }
-
-  section {
-    display: block;
+  
+  header h1 {
+    font-size: 22px;
+  }
+  
+  .contact-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .contact-buttons a.cta {
     width: 100%;
+    padding: 12px;
+  }
+  
+  section h1 {
+    font-size: 20px;
+  }
+  
+  details.tab summary h1 {
+    font-size: 18px;
+  }
+}
+
+/* Accessibility improvements for mobile */
+@media (hover: none) and (pointer: coarse) {
+  /* Increase touch target sizes on touch devices */
+  .contact-buttons a.cta {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  details.tab summary {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Smooth orientation change handling */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  header {
+    position: relative !important;
+    padding: 15px 20px !important;
+  }
+  
+  header img {
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin: 0 15px 0 0;
+  }
+  
+  header h1 {
+    font-size: 20px;
+    text-align: left;
+  }
+  
+  header p {
+    text-align: left;
+  }
+  
+  .contact-buttons {
+    justify-content: flex-start;
   }
 }
 
