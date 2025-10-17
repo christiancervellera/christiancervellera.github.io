@@ -350,59 +350,61 @@ details[open] summary::after {
 
 
 /* ------------------------------------------------------
-   TRUE Responsive layout fixes
+   Definitive mobile + tablet layout fix
 ------------------------------------------------------ */
 
-/* For tablets and smaller screens */
 @media screen and (max-width: 1024px) {
   body {
     padding: 20px;
-    background-attachment: scroll; /* avoid fixed bg jumpiness */
+    background-attachment: scroll;
+    overflow-x: hidden; /* stop horizontal scrollbars */
   }
 
-  /* Header no longer fixed or floated */
+  /* reset the fixed left column */
   header {
-    position: relative !important;
+    position: static !important;
     float: none !important;
     width: 100% !important;
+    display: block !important;
     margin: 0 auto 30px auto !important;
     text-align: center !important;
-    display: block !important;
+    clear: both !important;
   }
 
   header img {
     width: 150px;
     height: auto;
     border-radius: 50%;
-    margin-top: 10px;
-  }
-
-  /* Center the contact buttons under the photo */
-  .contact-buttons {
-    justify-content: center;
-  }
-
-  /* Make sure all sections stack naturally below */
-  section {
-    margin: 0 auto !important;
-    max-width: 100% !important;
-    width: 100% !important;
-    padding-bottom: 30px;
+    margin: 10px auto;
     display: block;
   }
 
-  /* Footer moves to bottom of flow */
+  .contact-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* main content stacks below */
+  section {
+    margin: 0 !important;
+    padding: 0 10px 40px 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    clear: both !important;
+  }
+
   footer {
-    position: relative !important;
+    position: static !important;
     float: none !important;
     width: 100% !important;
-    bottom: auto !important;
-    margin-top: 30px !important;
     text-align: center !important;
+    margin-top: 40px !important;
+    clear: both !important;
   }
 }
 
-/* Phones: tighter layout */
+/* small phones */
 @media screen and (max-width: 600px) {
   body {
     padding: 16px;
@@ -423,19 +425,4 @@ details[open] summary::after {
     font-size: 0.9rem;
     padding: 8px;
   }
-
-  details summary > h2 {
-    font-size: 1.1rem;
-  }
 }
-
-/* ------------------------------------------------------
-   Smooth layout transition on resize
------------------------------------------------------- */
-header,
-section,
-footer {
-  transition:
-    all 0.35s ease-in-out; /* Smoothly animates changes in layout, width, and margin */
-}
-
