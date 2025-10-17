@@ -181,7 +181,6 @@ header ul a strong {
 
 /* Main content column — made wider and responsive relative to wrapper/header */
 section {
-  /* leave room for the fixed 270px header + gap (50px) */
   width: calc(100% - 320px);
   float:right;
   padding-bottom:50px;
@@ -208,39 +207,42 @@ footer {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
-/* Collapsible (details/summary) styling and animation helpers */
+/* Collapsible (details/summary) styling - transparent, stacked vertically */
 details.tab {
-  background: rgba(255,255,255,0.85);
-  border: 1px solid #e5e5e5;
-  border-radius: 6px;
-  padding: 8px 12px;
-  margin-bottom: 14px;
-  transition: box-shadow .18s ease;
+  background: transparent;   /* fully transparent */
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0 0 8px 0;         /* small spacing between stacked tabs */
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* Hover/focus highlight for the whole tab */
-details.tab:hover, details.tab:focus-within {
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+/* Ensure stacked layout: if more explicit spacing needed */
+details.tab + details.tab {
+  margin-top: 10px;
 }
 
-/* Clear default marker and style summary */
+/* summary is a full-width horizontal strip (transparent) */
 details summary {
-  list-style: none;            /* fallback */
+  list-style: none;
   cursor: pointer;
   outline: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 6px 0;
+  padding: 8px 6px;
   user-select: none;
+  background: transparent;
 }
 
-/* Hide default marker in WebKit */
+/* remove default marker in WebKit */
 details summary::-webkit-details-marker {
   display: none;
 }
 
-/* Heading inside summary */
+/* Heading inside summary: keep it visually strong */
 details summary > h2 {
   margin: 0;
   font-size: 1.25rem;
@@ -248,7 +250,20 @@ details summary > h2 {
   color: #333;
 }
 
-/* Arrow - using pseudo element so it can rotate smoothly */
+/* subtle divider line below each summary to show separation while preserving transparency */
+details summary::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(0,0,0,0.04);
+  transform: translateY(24px); /* draws a line slightly below the summary text */
+  pointer-events: none;
+  display: block;
+}
+
+/* Arrow on the right that rotates when open */
 details summary::after {
   content: "▸";
   display: inline-block;
@@ -260,7 +275,7 @@ details summary::after {
   flex-shrink: 0;
 }
 
-/* Rotate arrow when open */
+/* rotate arrow when open */
 details[open] summary::after {
   transform: rotate(90deg);
   color: #CB4154;
@@ -275,9 +290,9 @@ details[open] summary::after {
   padding-top: 0;
 }
 
-/* Open state: allow a large max-height (works well for typical page sizes) */
+/* Open state: allow a large max-height as a fallback (JS will manage precise height) */
 details[open] .collapsible-content {
-  max-height: 1200px;           /* big enough for content; if you have huge content, increase */
+  max-height: 1200px;
   opacity: 1;
   padding-top: 8px;
 }
