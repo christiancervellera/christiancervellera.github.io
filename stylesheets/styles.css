@@ -119,6 +119,31 @@ header {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
+/* Contact buttons container (for email, LinkedIn, CV) */
+.contact-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.contact-buttons a.cta {
+  display: inline-block;
+  padding: 6px 10px;
+  font-size: 0.95rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  background: #CB4154;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06) inset;
+}
+.contact-buttons a.cta:hover,
+.contact-buttons a.cta:focus {
+  background: #b63a47;
+  outline: none;
+}
+
 /* Header list styles (unchanged) */
 header ul {
   list-style:none;
@@ -179,11 +204,12 @@ header ul a strong {
   color:#222;
 }
 
-/* Main content column — use left margin so content starts just right of the fixed header */
-/* This is the key change: remove float:right and use margin-left to anchor the content to the left edge (after the header). */
+/* Main content column — anchored to the left edge after the fixed header */
 section {
-  margin-left: 320px; /* leave 270px for header + 50px gap */
-  width: calc(100% - 340px); /* allow a small gutter; keeps responsiveness */
+  margin-left: 320px; /* 270px header + 50px gap */
+  margin-right: auto;
+  max-width: calc(1100px - 340px); /* restrict content width within wrapper */
+  width: 100%;
   padding-bottom:50px;
   box-sizing: border-box;
 }
@@ -209,34 +235,33 @@ footer {
 }
 
 /* Collapsible (details/summary) styling - transparent, stacked vertically */
+/* Ensure tabs align to the left of the section by forcing full width within the section and zero left margin/padding */
 details.tab {
-  background: transparent;   /* fully transparent */
+  background: transparent;
   border: none;
-  border-radius: 0;
   padding: 0;
-  margin: 0 0 8px 0;         /* small spacing between stacked tabs */
+  margin: 0 0 10px 0;
   display: block;
   width: 100%;
   box-sizing: border-box;
 }
 
-/* Ensure stacked layout: if more explicit spacing needed */
+/* Make sure tabs are stacked and start from the left edge */
 details.tab + details.tab {
   margin-top: 10px;
 }
 
-/* summary is a full-width horizontal strip (transparent) */
+/* summary is full-width and left-aligned. Arrow is absolutely positioned to the right edge of the summary. */
 details summary {
   list-style: none;
   cursor: pointer;
   outline: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 6px;
+  display: block;
+  padding: 8px 36px 8px 0; /* right padding to leave space for absolute arrow */
   user-select: none;
   background: transparent;
-  position: relative; /* <-- needed so ::before divider positions relative to summary */
+  position: relative; /* anchor for arrow and divider */
+  text-align: left;   /* keep text left-aligned */
 }
 
 /* remove default marker in WebKit */
@@ -244,12 +269,13 @@ details summary::-webkit-details-marker {
   display: none;
 }
 
-/* Heading inside summary: keep it visually strong */
+/* Heading inside summary: left-aligned and flush with section left edge */
 details summary > h2 {
   margin: 0;
   font-size: 1.25rem;
   font-weight: 500;
   color: #333;
+  padding-left: 0;
 }
 
 /* subtle divider line below each summary to show separation while preserving transparency */
@@ -260,43 +286,51 @@ details summary::before {
   right: 0;
   height: 1px;
   background: rgba(0,0,0,0.04);
-  bottom: -6px; /* position the divider slightly below the summary */
+  bottom: -6px;
   pointer-events: none;
   display: block;
 }
 
-/* Arrow on the right that rotates when open */
+/* Arrow absolutely positioned at the right edge of the summary so it doesn't affect flow */
 details summary::after {
   content: "▸";
-  display: inline-block;
-  margin-left: 12px;
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 1.1rem;
   color: #5a5a5a;
   transform-origin: center;
   transition: transform 300ms cubic-bezier(.2,.9,.2,1), color 180ms;
-  flex-shrink: 0;
 }
 
 /* rotate arrow when open */
 details[open] summary::after {
-  transform: rotate(90deg);
+  transform: translateY(-50%) rotate(90deg);
   color: #CB4154;
 }
 
 /* Collapsible content container for animating height */
 .collapsible-content {
   overflow: hidden;
-  max-height: 0;                /* closed state */
+  max-height: 0;
   transition: max-height 320ms cubic-bezier(.2,.9,.2,1), opacity 220ms ease;
   opacity: 0;
   padding-top: 0;
+  padding-left: 0; /* ensure content is flush-left */
 }
 
-/* Open state: allow a large max-height as a fallback (JS will manage precise height) */
+/* Open state fallback */
 details[open] .collapsible-content {
   max-height: 1200px;
   opacity: 1;
   padding-top: 8px;
+}
+
+/* Ensure content inside the collapsible is flush-left */
+details .tab-content {
+  margin-left: 0;
+  padding-left: 0;
 }
 
 /* Nice spacing for list items inside */
@@ -329,6 +363,7 @@ details .tab-content ul {
     margin:0 0 20px;
     margin-left: 0; /* override margin-left under narrow layouts */
     width: auto;
+    max-width: none;
   }
 
   header a small {
