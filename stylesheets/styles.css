@@ -1,6 +1,7 @@
+/* Base page styles */
 body {
   padding:50px;
-  font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   color:#595959;
   font-weight:400;
   background: linear-gradient(rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.90)), url('londonpoverty.jpg');
@@ -57,11 +58,15 @@ a:hover small {
   color:#777;
 }
 
+/* Wider, responsive wrapper */
 .wrapper {
-  width:860px;
+  max-width: 1100px;
+  width: 95%;
   margin:0 auto;
+  box-sizing: border-box;
 }
 
+/* Existing layout and typography rules retained */
 blockquote {
   border-left:1px solid #e5e5e5;
   margin:0;
@@ -106,6 +111,7 @@ img {
   max-width:100%;
 }
 
+/* Header left column stays fixed */
 header {
   width:270px;
   float:left;
@@ -113,6 +119,7 @@ header {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
+/* Header list styles (unchanged) */
 header ul {
   list-style:none;
   height:40px;
@@ -172,12 +179,16 @@ header ul a strong {
   color:#222;
 }
 
+/* Main content column — made wider and responsive relative to wrapper/header */
 section {
-  width:500px;
+  /* leave room for the fixed 270px header + gap (50px) */
+  width: calc(100% - 320px);
   float:right;
   padding-bottom:50px;
+  box-sizing: border-box;
 }
 
+/* Small typography */
 small {
   font-size:11px;
 }
@@ -197,6 +208,86 @@ footer {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
+/* Collapsible (details/summary) styling and animation helpers */
+details.tab {
+  background: rgba(255,255,255,0.85);
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 14px;
+  transition: box-shadow .18s ease;
+}
+
+/* Hover/focus highlight for the whole tab */
+details.tab:hover, details.tab:focus-within {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* Clear default marker and style summary */
+details summary {
+  list-style: none;            /* fallback */
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+  user-select: none;
+}
+
+/* Hide default marker in WebKit */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Heading inside summary */
+details summary > h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Arrow - using pseudo element so it can rotate smoothly */
+details summary::after {
+  content: "▸";
+  display: inline-block;
+  margin-left: 12px;
+  font-size: 1.1rem;
+  color: #5a5a5a;
+  transform-origin: center;
+  transition: transform 300ms cubic-bezier(.2,.9,.2,1), color 180ms;
+  flex-shrink: 0;
+}
+
+/* Rotate arrow when open */
+details[open] summary::after {
+  transform: rotate(90deg);
+  color: #CB4154;
+}
+
+/* Collapsible content container for animating height */
+.collapsible-content {
+  overflow: hidden;
+  max-height: 0;                /* closed state */
+  transition: max-height 320ms cubic-bezier(.2,.9,.2,1), opacity 220ms ease;
+  opacity: 0;
+  padding-top: 0;
+}
+
+/* Open state: allow a large max-height (works well for typical page sizes) */
+details[open] .collapsible-content {
+  max-height: 1200px;           /* big enough for content; if you have huge content, increase */
+  opacity: 1;
+  padding-top: 8px;
+}
+
+/* Nice spacing for list items inside */
+details .tab-content ul {
+  margin: 0.4rem 0 0.8rem 1.1rem;
+}
+
+/* Media queries follow original logic but respect new widths */
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
@@ -271,6 +362,3 @@ footer {
     color:#444;
   }
 }
-
-
-
