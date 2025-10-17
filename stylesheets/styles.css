@@ -486,3 +486,15 @@ header {
   }
 }
 
+@media (max-width: 900px) {
+  .wrapper {
+    display: block !important;
+  }
+
+  section {
+    display: block;
+    width: 100%;
+  }
+}
+
+
