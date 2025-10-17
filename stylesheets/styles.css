@@ -426,3 +426,63 @@ details[open] summary::after {
     padding: 8px;
   }
 }
+
+/* Default (desktop) */
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  padding: 2rem;
+  background-color: #f8f8f8;
+  overflow-y: auto;
+}
+
+/* The main content shifts right to make space for the fixed header */
+.wrapper section, 
+.wrapper footer {
+  margin-left: 270px;
+  padding: 2rem;
+}
+
+/* --- Responsive layout for tablets and phones --- */
+@media (max-width: 900px) {
+  header {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .wrapper section, 
+  .wrapper footer {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  header img {
+    max-width: 120px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .contact-buttons .cta {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
