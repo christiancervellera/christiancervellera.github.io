@@ -119,6 +119,32 @@ header {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
+/* Contact buttons container (for email, LinkedIn, CV) */
+.contact-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.contact-buttons a.cta {
+  display: inline-block;
+  padding: 6px 10px;
+  font-size: 0.95rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  background: #CB4154;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06) inset;
+}
+.contact-buttons a.cta:hover,
+.contact-buttons a.cta:focus {
+  background: #b63a47;
+  outline: none;
+}
+
+
 /* Header list styles (unchanged) */
 header ul {
   list-style:none;
