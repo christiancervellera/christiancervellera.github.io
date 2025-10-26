@@ -1,3 +1,22 @@
+:root {
+
+
+  --link-color: #CB4154;
+
+
+  --link-color-dark: #b63a47;
+
+
+  --muted-border: rgba(0,0,0,0.06);
+
+
+  --muted-bg-hover: rgba(0,0,0,0.04);
+
+
+}
+
+
+
 /* Base page styles */
 body {
   padding:50px;
@@ -9,6 +28,32 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+
+a {
+
+
+
+  color:#CB4154;
+
+
+  color: var(--link-color);
+
+  text-decoration:none;
+
+}
+
+
+
+a:hover {
+
+
+  color:#CB4154;
+
+
+  color: var(--link-color);
+
+}
+
 
 h1, h2, h3, h4, h5, h6 {
   color:#222;
@@ -142,17 +187,17 @@ header {
   font-size: 0.95rem;
   border-radius: 5px;
   text-decoration: none;
-  color: #333;                          /* dark text for transparent buttons */
-  background: transparent;              /* transparent inside */
-  border: 1px solid rgba(0,0,0,0.06);   /* subtle border so they remain visible */
+  color: var(--link-color);               /* button label color matches links */
+  background: transparent;                /* transparent inside */
+  border: 1px solid rgba(203,65,84,0.12); /* very subtle border with link hue */
   transition: background-color 160ms ease, color 160ms ease, box-shadow 160ms ease;
 }
 
 /* Hover/focus for transparent CTAs: slight translucent background */
 .contact-buttons a.cta:hover,
 .contact-buttons a.cta:focus {
-  background: rgba(0,0,0,0.04);
-  color: #222;
+ background: var(--muted-bg-hover);
+  color: var(--link-color-dark);
   outline: none;
   box-shadow: 0 0 0 3px rgba(0,0,0,0.03);
 }
@@ -164,16 +209,15 @@ header {
 
 /* CV CTA: filled with the link color and white text */
 .contact-buttons a.cta.cv {
-  background: #CB4154;         /* filled color matching link color */
-  color: #fff;
-  border-color: #CB4154;
+  background: var(--link-color);         /* filled color matching link color */  color: #fff;
+  border-color: var(--link-color);
   box-shadow: 0 1px 0 rgba(255,255,255,0.06) inset;
 }
 
 /* Hover/focus for CV CTA: slightly darker shade */
 .contact-buttons a.cta.cv:hover,
 .contact-buttons a.cta.cv:focus {
-  background: #b63a47;
+  background: var(--link-color-dark);
   color: #fff;
   outline: none;
   box-shadow: 0 0 0 4px rgba(203,65,84,0.14);
@@ -271,7 +315,7 @@ footer {
 
 /* Collapsible (details/summary) styling and animation helpers */
 details.tab {
-  background: rgba(255,255,255,0.90);
+  background: rgba(255,255,255,0.50);
   border: 1px solid #e5e5e5;
   border-radius: 6px;
   padding: 8px 12px;
