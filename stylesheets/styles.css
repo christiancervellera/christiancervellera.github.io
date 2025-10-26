@@ -317,7 +317,7 @@ footer {
 details.tab {
   background: rgba(255,255,255,0.50);
   border: 1px solid #e5e5e5;
-  border-radius: 6px;
+  border-radius: 10px;
   padding: 8px 12px;
   margin-bottom: 14px;
   transition: box-shadow .18s ease;
@@ -470,6 +470,6 @@ details .tab-content ul {
 
 
 header img {
-  border-radius: 17px;     /* smooth corners */
+  border-radius: 10px;     /* smooth corners */
 }
 
