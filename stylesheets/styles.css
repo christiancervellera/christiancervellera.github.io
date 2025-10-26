@@ -29,9 +29,8 @@ body {
   background-size: cover;
 }
 
+
 a {
-
-
 
   color:#CB4154;
 
@@ -291,6 +290,11 @@ section {
   float:right;
   padding-bottom:50px;
   box-sizing: border-box;
+}
+
+p, li {
+  text-align: justify;
+  text-justify: inter-word; /* adjusts spacing between words for better appearance */
 }
 
 /* Small typography */
