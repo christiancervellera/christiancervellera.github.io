@@ -127,21 +127,56 @@ header {
   flex-wrap: wrap;
 }
 
+/* Contact buttons container (for email, LinkedIn, CV) */
+.contact-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* Default CTA: transparent (no filled background), subtle border, left-aligned text color */
 .contact-buttons a.cta {
   display: inline-block;
   padding: 6px 10px;
   font-size: 0.95rem;
   border-radius: 5px;
   text-decoration: none;
-  color: #fff;
-  background: #CB4154;
-  border: 1px solid rgba(0,0,0,0.06);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.06) inset;
+  color: #333;                          /* dark text for transparent buttons */
+  background: transparent;              /* transparent inside */
+  border: 1px solid rgba(0,0,0,0.06);   /* subtle border so they remain visible */
+  transition: background-color 160ms ease, color 160ms ease, box-shadow 160ms ease;
 }
+
+/* Hover/focus for transparent CTAs: slight translucent background */
 .contact-buttons a.cta:hover,
 .contact-buttons a.cta:focus {
-  background: #b63a47;
+  background: rgba(0,0,0,0.04);
+  color: #222;
   outline: none;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.03);
+}
+
+/* Focus-visible for keyboard users (accessible focus ring) */
+.contact-buttons a.cta:focus-visible {
+  box-shadow: 0 0 0 4px rgba(0,0,0,0.06);
+}
+
+/* CV CTA: filled with the link color and white text */
+.contact-buttons a.cta.cv {
+  background: #CB4154;         /* filled color matching link color */
+  color: #fff;
+  border-color: #CB4154;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06) inset;
+}
+
+/* Hover/focus for CV CTA: slightly darker shade */
+.contact-buttons a.cta.cv:hover,
+.contact-buttons a.cta.cv:focus {
+  background: #b63a47;
+  color: #fff;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(203,65,84,0.14);
 }
 
 
@@ -236,7 +271,7 @@ footer {
 
 /* Collapsible (details/summary) styling and animation helpers */
 details.tab {
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.90);
   border: 1px solid #e5e5e5;
   border-radius: 6px;
   padding: 8px 12px;
