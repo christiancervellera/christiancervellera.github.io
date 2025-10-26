@@ -470,7 +470,6 @@ details .tab-content ul {
 
 
 header img {
-  border-radius: 12px;     /* smooth corners */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* soft shadow for depth */
+  border-radius: 20px;     /* smooth corners */
 }
 
