@@ -222,6 +222,31 @@ header {
   box-shadow: 0 0 0 4px rgba(203,65,84,0.14);
 }
 
+/* Icon-only CTA buttons */
+.contact-buttons a.cta.icon {
+  padding: 6px;
+  line-height: 0;
+}
+
+.contact-buttons .cta-icon {
+  width: 16px;
+  height: 16px;
+  display: block;
+  fill: currentColor;
+}
+
+/* Keep the CV icon "filled" like the old CV button */
+.contact-buttons a.cta.icon.cv {
+  background: var(--link-color);
+  border-color: var(--link-color);
+  color: #fff;
+}
+
+.contact-buttons a.cta.icon.cv:hover,
+.contact-buttons a.cta.icon.cv:focus {
+  background: var(--link-color-dark);
+  color: #fff;
+}
 
 /* Header list styles (unchanged) */
 header ul {
