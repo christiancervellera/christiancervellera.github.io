@@ -232,9 +232,12 @@ header {
   width: 16px;
   height: 16px;
   display: block;
-  fill: currentColor;
 }
 
+.contact-buttons .cta-icon,
+.contact-buttons .cta-icon path {
+  fill: currentColor;
+}
 /* Keep the CV icon "filled" like the old CV button */
 .contact-buttons a.cta.icon.cv {
   background: var(--link-color);
